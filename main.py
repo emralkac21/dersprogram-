@@ -10,16 +10,19 @@ import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-from data.database import Database
-from utils.config import Config
-from gui.main_window import MainWindow
+from database import Database
+from config import Config
+from main_window import MainWindow
 
 def setup_logging():
     """
     Loglama ayarlarını yapılandırır
     """
+    # Proje kök dizini
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    
     # Log dizini
-    log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs")
+    log_dir = os.path.join(project_root, "logs")
     os.makedirs(log_dir, exist_ok=True)
     
     # Log dosyası
@@ -45,9 +48,12 @@ def main():
     logger = setup_logging()
     logger.info("Uygulama başlatılıyor...")
     
+    # Proje kök dizini
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    
     try:
         # Veritabanı bağlantısı
-        db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "ders_programi.db")
+        db_path = os.path.join(project_root, "data", "ders_programi.db")
         db = Database(db_path)
         logger.info(f"Veritabanı bağlantısı kuruldu: {db_path}")
         
@@ -66,7 +72,7 @@ def main():
         
         # Uygulama simgesi
         try:
-            icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "icon.ico")
+            icon_path = os.path.join(project_root, "assets", "icon.ico")
             if os.path.exists(icon_path):
                 root.iconbitmap(icon_path)
         except Exception as e:
