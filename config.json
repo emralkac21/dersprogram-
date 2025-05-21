@@ -1,0 +1,48 @@
+{
+    "database": {
+        "path": "C:\\Users\\merva\\Desktop\\ders_programi_uygulamasi\\data\\ders_programi.db",
+        "file": "data/ders_programi.db",
+        "backup_dir": "backups"
+    },
+    "app": {
+        "title": "Ders Programı Oluşturma",
+        "theme": "clam",
+        "language": "tr",
+        "auto_backup": true
+    },
+    "schedule": {
+        "lesson_duration": 40,
+        "break_duration": 10,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "lunch_break_start": "12:00",
+        "lunch_break_end": "13:00",
+        "max_daily_lessons": 8,
+        "max_weekly_lessons": 40,
+        "days": [
+            "Pazartesi",
+            "Salı",
+            "Çarşamba",
+            "Perşembe",
+            "Cuma"
+        ]
+    },
+    "export": {
+        "default_format": "pdf",
+        "pdf_page_size": "A4",
+        "pdf_orientation": "landscape",
+        "default_dir": "C:\\Users\\merva",
+        "excel_sheet_name": "Ders Programı",
+        "excel_include_header": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/ders_programi.log"
+    },
+    "appearance": {
+        "theme": "Varsayılan",
+        "font": "Varsayılan",
+        "font_size": "Normal",
+        "color_scheme": "Varsayılan"
+    }
+}

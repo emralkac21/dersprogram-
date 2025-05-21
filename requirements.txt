@@ -1,0 +1,4 @@
+ortools>=9.4.0
+reportlab>=3.6.0
+openpyxl>=3.0.0
+pillow>=9.0.0
